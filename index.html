@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Ultimate Calculator</h2>
+        <input type="text" id="display" disabled placeholder="0">
+
+        <div class="controls">
+            <button id="themeBtn">Dark/Light</button>
+            <button id="angleBtn">Degrees</button>
+        </div>
+
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+            <button onclick="appendValue('^')">^</button>
+
+            <!-- Row 2 -->
+            <button onclick="appendValue('sin(')">sin</button>
+            <button onclick="appendValue('cos(')">cos</button>
+            <button onclick="appendValue('tan(')">tan</button>
+            <button onclick="appendValue('log(')">log</button>
+            <button onclick="appendValue('ln(')">ln</button>
+
+            <!-- Row 3 -->
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('%')">%</button>
+
+            <!-- Row 4 -->
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="appendValue('1/')">1/x</button>
+
+            <!-- Row 5 -->
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')">−</button>
+            <button onclick="calculateResult()">=</button>
+
+            <!-- Row 6 -->
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="appendValue('+')">+</button>
+            <button onclick="appendValue('!')">!</button>
+            <button onclick="appendValue('π')">π</button>
+            <button onclick="appendValue('e')">e</button>
+
+            <!-- Memory -->
+            <button onclick="memoryPlus()">M+</button>
+            <button onclick="memoryMinus()">M-</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryClear()">MC</button>
+        </div>
+
+        <div id="history">
+            <h3>History <button onclick="copyHistory()">Copy</button></h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
